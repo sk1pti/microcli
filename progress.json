@@ -1,0 +1,13 @@
+{
+  "total_solved": 0,
+  "streak_days": 0,
+  "last_solved_date": null,
+  "completed_tasks": {},
+  "category_stats": {
+    "Логика": 0,
+    "Математика": 0,
+    "Программирование": 0,
+    "Языки": 0,
+    "Общие знания": 0
+  }
+}
