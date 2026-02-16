@@ -2,15 +2,19 @@
 
 MicroCLI — это программа для ежедневного обучения через командную строку. Получайте небольшие задания, проверяйте свои знания и отслеживайте прогресс!
 
-## ✨ Возможности
+---
 
-- 📝 **Ежедневные задания** — получайте новые вопросы каждый день
+## 🇷🇺 Русская версия
+
+### ✨ Возможности
+
+- 📝 **30 заданий** — логика, математика, программирование, языки, общие знания
+- 🌍 **Двуязычность** — русский и английский интерфейс
 - 📊 **Статистика** — отслеживайте прогресс и streak дней
-- 📁 **Категории** — логика, математика, программирование, языки и др.
-- 🎨 **Красивый интерфейс** — использует библиотеку Rich для подсветки
-- 🔄 **Расширяемость** — легко добавляйте новые задания через JSON
+- 🎨 **Красивый интерфейс** — использует библиотеку Rich
+- 🔄 **Расширяемость** — легко добавляйте новые задания
 
-## 🚀 Установка
+### 🚀 Установка
 
 ```bash
 # Клонировать репозиторий
@@ -24,75 +28,50 @@ pip install rich
 python microcli.py
 ```
 
-## 📖 Использование
+### 📖 Использование
 
-### Получить сегодняшнее задание
+#### Выбор языка
 
 ```bash
+# Русский интерфейс (по умолчанию)
 python microcli.py today
+python microcli.py --lang ru today
+
+# Английский интерфейс
+python microcli.py --lang en today
 ```
 
-### Показать статистику
+#### Команды
 
 ```bash
+# Получить сегодняшнее задание
+python microcli.py today
+
+# Показать статистику
 python microcli.py stats
-```
 
-### Выбрать категорию
-
-```bash
+# Выбрать категорию
 python microcli.py category "Логика"
 python microcli.py category "Математика"
-python microcli.py category "Программирование"
-```
 
-### Показать все категории
-
-```bash
+# Показать все категории
 python microcli.py categories
-```
 
-### Сбросить прогресс
-
-```bash
+# Сбросить прогресс
 python microcli.py reset
 ```
 
-## 📋 Пример работы
+### 📁 Категории
 
-```
-$ python microcli.py today
+| Категория | Заданий | Описание |
+|-----------|---------|----------|
+| Логика | 6 | Задачи на логическое мышление |
+| Математика | 6 | Простые математические вопросы |
+| Программирование | 6 | Основы Python |
+| Языки | 6 | Изучение английских слов |
+| Общие знания | 6 | Вопросы из разных областей |
 
-╭────────────────────────────────────────────────────────────╮
-│ 📚 Программирование                                        │
-│                                                            │
-│  Какой тип данных возвращает input() в Python?             │
-│                                                            │
-│  Нажмите Enter для ответа или 'q' для выхода              │
-╰────────────────────────────────────────────────────────────╯
-
-Ваш ответ: str
-
-✅ Правильно!
-
-💡 Функция input() всегда возвращает строку (str).
-
-🔥 Дней подряд: 1
-📊 Всего решено: 1
-```
-
-## 📁 Структура проекта
-
-```
-microcli/
-├── microcli.py      # Основной скрипт
-├── tasks.json       # База заданий
-├── progress.json   # Прогресс пользователя
-├── utils.py        # Вспомогательные функции
-└── README.md       # Этот файл
-```
-
-## ➕ Добавление новых заданий
+### ➕ Добавление новых заданий
 
 Добавьте задание в `tasks.json`:
 
@@ -106,18 +85,109 @@ microcli/
 }
 ```
 
-## 🎯 Категории
+---
 
-- **Логика** — задачи на логическое мышление
-- **Математика** — простые математические вопросы
-- **Программирование** — основы Python и программирования
-- **Языки** — изучение иностранных слов
-- **Общие знания** — вопросы из разных областей
+## 🇬🇧 English Version
 
-## 📝 Лицензия
+### ✨ Features
+
+- 📝 **30 tasks** — logic, math, programming, languages, trivia
+- 🌍 **Bilingual** — Russian and English interface
+- 📊 **Statistics** — track progress and streak days
+- 🎨 **Beautiful UI** — using Rich library
+- 🔄 **Extensible** — easily add new tasks
+
+### 🚀 Installation
+
+```bash
+# Clone repository
+git clone https://github.com/sk1pti/microcli.git
+cd microcli
+
+# Install dependencies
+pip install rich
+
+# Run
+python microcli.py
+```
+
+### 📖 Usage
+
+#### Language Selection
+
+```bash
+# Russian interface (default)
+python microcli.py today
+python microcli.py --lang ru today
+
+# English interface
+python microcli.py --lang en today
+```
+
+#### Commands
+
+```bash
+# Get today's task
+python microcli.py today
+
+# Show statistics
+python microcli.py stats
+
+# Choose category
+python microcli.py category "Logic"
+python microcli.py category "Math"
+
+# Show all categories
+python microcli.py categories
+
+# Reset progress
+python microcli.py reset
+```
+
+### 📁 Categories
+
+| Category | Tasks | Description |
+|----------|-------|-------------|
+| Logic | 6 | Logical thinking tasks |
+| Math | 6 | Simple math questions |
+| Programming | 6 | Python basics |
+| Languages | 6 | English vocabulary |
+| Trivia | 6 | General knowledge questions |
+
+### ➕ Adding New Tasks
+
+Add a task to `tasks.json`:
+
+```json
+{
+  "id": "my_task_001",
+  "category": "My Category",
+  "question": "Your question?",
+  "answer": "Correct answer",
+  "explanation": "Explanation (optional)"
+}
+```
+
+---
+
+## 📁 Structure
+
+```
+microcli/
+├── microcli.py      # Main script
+├── tasks.json       # 30 tasks database
+├── progress.json   # User progress
+├── utils.py        # Utility functions
+├── locales/         # Translations
+│   ├── ru.json     # Russian
+│   └── en.json     # English
+└── README.md       # This file
+```
+
+## 📝 License
 
 MIT License
 
-## 🤝 Вклад
+## 🤝 Contributing
 
-Приветствуются Pull Requests с новыми заданиями и улучшениями!
+Pull Requests with new tasks and improvements are welcome!
